@@ -1,0 +1,389 @@
+{
+  "project_info": {
+    "project_number": "382266770478",
+    "firebase_url": "https://official-freshcart-database.firebaseio.com",
+    "project_id": "official-freshcart-database",
+    "storage_bucket": "official-freshcart-database.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382266770478:android:fda95b773f40380c",
+        "android_client_info": {
+          "package_name": "com.example.hendryshanedeguia.freshcartcustomer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382266770478-r0bi1cqft8ivhijm4rc7m16g637il0sl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hendryshanedeguia.freshcartcustomer",
+            "certificate_hash": "25f96838e1efd38b3c67035e7d87bf23fd6e49f3"
+          }
+        },
+        {
+          "client_id": "382266770478-f9a856knjpd44681r1jbd1n5fhovqgp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8muOkTeNRrmccgXY7JWHV3AUsAe48kVU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382266770478-f9a856knjpd44681r1jbd1n5fhovqgp0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382266770478:android:ffe14fcb5c70d920",
+        "android_client_info": {
+          "package_name": "shopwise.freshcartcustomerfinal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382266770478-f9a856knjpd44681r1jbd1n5fhovqgp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8muOkTeNRrmccgXY7JWHV3AUsAe48kVU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382266770478:android:8d669039c995a35f",
+        "android_client_info": {
+          "package_name": "com.example.hendryshanedeguia.productuploader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382266770478-so5fe24u86be81vk2sjiuh4it8fb0eq5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hendryshanedeguia.productuploader",
+            "certificate_hash": "25f96838e1efd38b3c67035e7d87bf23fd6e49f3"
+          }
+        },
+        {
+          "client_id": "382266770478-f9a856knjpd44681r1jbd1n5fhovqgp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8muOkTeNRrmccgXY7JWHV3AUsAe48kVU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382266770478-f9a856knjpd44681r1jbd1n5fhovqgp0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382266770478:android:2dfb1b64e79c7bc5",
+        "android_client_info": {
+          "package_name": "com.example.hendryshanedeguia.driverretrieval"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382266770478-5iqrc3v24jf98at2lu9rqdjjq0b300pc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hendryshanedeguia.driverretrieval",
+            "certificate_hash": "2b5e788d51b8154206d97935c0f8162be61b79c1"
+          }
+        },
+        {
+          "client_id": "382266770478-m2d0m7rqtabkv8gmnsv2kp27n3q09bak.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hendryshanedeguia.driverretrieval",
+            "certificate_hash": "25f96838e1efd38b3c67035e7d87bf23fd6e49f3"
+          }
+        },
+        {
+          "client_id": "382266770478-f9a856knjpd44681r1jbd1n5fhovqgp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8muOkTeNRrmccgXY7JWHV3AUsAe48kVU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382266770478-f9a856knjpd44681r1jbd1n5fhovqgp0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382266770478:android:5dbca1fb46f31886",
+        "android_client_info": {
+          "package_name": "shopwise.retrieval"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382266770478-vpeih8eadmuj90alvune41dqm31vfdgb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "shopwise.retrieval",
+            "certificate_hash": "2b5e788d51b8154206d97935c0f8162be61b79c1"
+          }
+        },
+        {
+          "client_id": "382266770478-f9a856knjpd44681r1jbd1n5fhovqgp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8muOkTeNRrmccgXY7JWHV3AUsAe48kVU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382266770478-f9a856knjpd44681r1jbd1n5fhovqgp0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382266770478:android:066f2a18a03a915a",
+        "android_client_info": {
+          "package_name": "shopwise.freshcartdriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382266770478-kn736is7od00pfv2i1dlp3vjlrlgoh04.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "shopwise.freshcartdriver",
+            "certificate_hash": "2b5e788d51b8154206d97935c0f8162be61b79c1"
+          }
+        },
+        {
+          "client_id": "382266770478-f9a856knjpd44681r1jbd1n5fhovqgp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8muOkTeNRrmccgXY7JWHV3AUsAe48kVU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382266770478-f9a856knjpd44681r1jbd1n5fhovqgp0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382266770478:android:4a4fd4dc38510ba3",
+        "android_client_info": {
+          "package_name": "shopwise.freshcart_driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382266770478-n6h6h3lutvm9elc60ac9i8aet4adv84t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "shopwise.freshcart_driver",
+            "certificate_hash": "2b5e788d51b8154206d97935c0f8162be61b79c1"
+          }
+        },
+        {
+          "client_id": "382266770478-f9a856knjpd44681r1jbd1n5fhovqgp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8muOkTeNRrmccgXY7JWHV3AUsAe48kVU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382266770478-f9a856knjpd44681r1jbd1n5fhovqgp0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382266770478:android:ea42e0d5495e9a33",
+        "android_client_info": {
+          "package_name": "shopwise.freshcartdriverofficial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382266770478-0adeuhcfm9remp7f4gt408b3euicht5o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "shopwise.freshcartdriverofficial",
+            "certificate_hash": "2b5e788d51b8154206d97935c0f8162be61b79c1"
+          }
+        },
+        {
+          "client_id": "382266770478-f9a856knjpd44681r1jbd1n5fhovqgp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8muOkTeNRrmccgXY7JWHV3AUsAe48kVU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382266770478-f9a856knjpd44681r1jbd1n5fhovqgp0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382266770478:android:2ac8c7eb10297239",
+        "android_client_info": {
+          "package_name": "com.simcoder.uber"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382266770478-f9a856knjpd44681r1jbd1n5fhovqgp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8muOkTeNRrmccgXY7JWHV3AUsAe48kVU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hendryshanedeguia.driverretrieval.StartActivity">
+
+    <ImageView
+        android:id="@+id/Main_imgBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/main" />
+
+
+    <ImageView
+        android:id="@+id/img_DeliveryLogo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/delivery"
+        android:layout_marginTop="44dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:id="@+id/Main_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_DeliveryLogo"
+        android:layout_centerHorizontal="true"
+        android:text="FRESHCART DRIVER"
+        android:textAlignment="center"
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textSize="50sp" />
+
+
+    <Button
+        android:id="@+id/Main_btnLogin"
+        style="@style/buttonloginstyle"
+        android:text="Already Have an Account"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="397dp"
+        android:layout_above="@+id/btnRegister"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/btnRegister"
+        style="@style/buttonregisterstyle"
+        android:text="Don't Have an Account?"
+        android:textColor="@android:color/white"
+
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="397dp"
+        android:layout_marginBottom="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+
+</RelativeLayout>

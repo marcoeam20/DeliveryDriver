@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hendryshanedeguia.driverretrieval.RegisterActivity">
+
+    <include layout="@layout/app_bar_layout" android:id="@+id/reg_appbar"/>
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/regback"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <include
+        layout="@layout/app_bar_layout"
+        android:id="@+id/MainAppBar"/>
+
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/txtName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="Enter Name"
+        android:textColor="@color/common_google_signin_btn_text_light_pressed"
+        android:textColorLink="@color/common_google_signin_btn_text_light_default"
+        android:layout_below="@+id/MainAppBar"
+        android:layout_centerHorizontal="true" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/txtUsername"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtName"
+        android:layout_below="@+id/txtName"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Your Username"
+        android:textColor="@color/common_google_signin_btn_text_light_pressed"
+        android:textColorLink="@color/common_google_signin_btn_text_light_pressed" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/txtEmail"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtUsername"
+        android:layout_below="@+id/txtUsername"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Your Email Address"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/common_google_signin_btn_text_light_pressed"
+        android:textColorLink="@color/common_google_signin_btn_text_light_pressed" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/txtPassword"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtEmail"
+        android:layout_below="@+id/txtEmail"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Your Password"
+        android:inputType="textPassword"
+        android:textColor="@color/common_google_signin_btn_text_light_pressed"
+        android:textColorLink="@color/common_google_signin_btn_text_light_pressed" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/txtConfirmPassword"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtPassword"
+        android:layout_below="@+id/txtPassword"
+        android:layout_marginTop="30dp"
+        android:hint="Enter Your Password Again"
+        android:inputType="textPassword"
+        android:textColor="@color/common_google_signin_btn_text_light_pressed"
+        android:textColorLink="@color/common_google_signin_btn_text_light_pressed" />
+
+
+    <Button
+        android:id="@+id/Ver_btnSubmit"
+        style="@style/button_style"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp"
+        android:text="REGISTER"
+        android:textColor="@color/common_google_signin_btn_text_light_default"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="397dp" />
+
+
+
+</RelativeLayout>
