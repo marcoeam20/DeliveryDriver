@@ -103,6 +103,7 @@ public class RegisterActivity extends AppCompatActivity {
                     HashMap<String, String> driverMap = new HashMap<String, String>();
                     driverMap.put("name", name);
                     driverMap.put("username", username);
+                    driverMap.put("email", email);
                     driverMap.put("image", "default");
                     driverMap.put("thumb_image", "default");
                     driverMap.put("device_token", device_token);

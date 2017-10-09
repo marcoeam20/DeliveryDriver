@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="25dp">
+
+    <TextView
+        android:id="@+id/tvOSQuantity"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:text="TextView"
+        android:layout_marginStart="13dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tvOSPrice"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="23dp"
+        android:text="TextView"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/tvOSName" />
+
+    <TextView
+        android:id="@+id/tvOSTotal"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="21dp"
+        android:layout_toEndOf="@+id/tvOSPrice"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/tvOSName"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:text="TextView"
+        android:layout_marginStart="27dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/tvOSQuantity" />
+</RelativeLayout>

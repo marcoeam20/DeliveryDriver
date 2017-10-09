@@ -28,13 +28,12 @@
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView4"
         android:text="FreshCart Login"
         android:textAlignment="center"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
-        android:textSize="50sp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:textSize="65dp"
+        android:layout_below="@+id/imageView4"
+        android:layout_alignStart="@+id/log_btnSubmit" />
 
 
     <EditText
@@ -44,9 +43,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtTitle"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="59dp"
+        android:layout_marginTop="45dp"
         android:hint="Email Address"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:selectAllOnFocus="false" />
 
 
     <EditText
@@ -56,34 +56,24 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/txtEmail"
         android:layout_below="@+id/txtEmail"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:hint="Password"
         android:inputType="textPassword" />
-
 
 
     <Button
         android:id="@+id/log_btnSubmit"
         style="@style/button_style"
-        android:layout_marginTop="10dp"
+        android:layout_below="@+id/txtPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
         android:text="LOGIN"
         android:textColor="@color/common_google_signin_btn_text_light_default"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="397dp"
-        android:layout_below="@+id/txtPassword"
-        android:layout_centerHorizontal="true" />
+        tools:layout_editor_absoluteY="397dp" />
 
-    <TextView
-        android:id="@+id/txtSignUP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
 
-        android:layout_below="@id/log_btnSubmit"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="20dp"
-        android:text="Don't have an account yet? SIGN UP"
-        android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
 
 

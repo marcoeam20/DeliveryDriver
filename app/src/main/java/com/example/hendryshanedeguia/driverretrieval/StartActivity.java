@@ -1,10 +1,12 @@
 package com.example.hendryshanedeguia.driverretrieval;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -15,6 +17,10 @@ public class StartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+
+        TextView Title = (TextView) findViewById(R.id.Main_Title);
+        Typeface tx = Typeface.createFromAsset(getApplicationContext().getAssets(), "BebasNeue.otf");
+        Title.setTypeface(tx);
 
         //id referencing
         btnLogin = (Button) findViewById(R.id.Main_btnLogin);

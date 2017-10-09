@@ -9,6 +9,7 @@ import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,6 +27,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -36,9 +38,11 @@ public class AccountSettingsActivity extends AppCompatActivity {
 
     private EditText mNameField, mPhoneField, mAddressField;
 
-    private Button mBack, mConfirm;
+    private Button mBackButton, mConfirm;
 
     private ImageView mProfileImage;
+
+    private Toolbar mToolbar;
 
     private FirebaseAuth mAuth;
     private DatabaseReference mDriverDatabase;
@@ -58,12 +62,16 @@ public class AccountSettingsActivity extends AppCompatActivity {
 
         mNameField = (EditText) findViewById(R.id.name);
         mPhoneField = (EditText) findViewById(R.id.phone);
-        mAddressField = (EditText) findViewById(R.id.address);
 
-        mProfileImage = (ImageView) findViewById(R.id.profileImage);
+        mProfileImage = (ImageView) findViewById(R.id.ProfilePic);
 
-        mBack = (Button) findViewById(R.id.back);
-        mConfirm = (Button) findViewById(R.id.confirm);
+        mConfirm = (Button) findViewById(R.id.btn_ASAccept);
+        mBackButton = (Button) findViewById(R.id.btn_ASBackButton);
+
+        mToolbar = (Toolbar) findViewById(R.id.appbarAccount);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle("MY ACCOUNT");
+
 
         mAuth = FirebaseAuth.getInstance();
         userID = mAuth.getCurrentUser().getUid();
@@ -88,7 +96,7 @@ public class AccountSettingsActivity extends AppCompatActivity {
             }
         });
 
-        mBack.setOnClickListener(new View.OnClickListener() {
+        mBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
@@ -104,12 +112,10 @@ public class AccountSettingsActivity extends AppCompatActivity {
 
         mName = mNameField.getEditableText().toString();
         mPhone = mPhoneField.getEditableText().toString();
-        mAddress = mAddressField.getEditableText().toString();
 
         Map userInfo = new HashMap();
         userInfo.put("name", mName);
         userInfo.put("phone", mPhone);
-        userInfo.put("address", mAddress);
         mDriverDatabase.updateChildren(userInfo);
 
         if(resultUri != null){
@@ -186,9 +192,10 @@ public class AccountSettingsActivity extends AppCompatActivity {
 
                     if(map.get("profileImageUrl")!=null){
                         mProfileImageUrl = map.get("profileImageUrl").toString();
-                        Glide.with(getApplication()).load(mProfileImage).into(mProfileImage);
+                        Picasso.with(AccountSettingsActivity.this).load(mProfileImageUrl).placeholder(R.drawable.defaultuser).into(mProfileImage);
 
                     }
+
                 }
             }
 

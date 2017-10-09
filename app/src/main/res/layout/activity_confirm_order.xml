@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hendryshanedeguia.driverretrieval.ConfirmOrder">
+
+    <include layout="@layout/app_bar_layout" android:id="@+id/successAppBar" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/successAppBar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="59dp"
+        android:text="CONGRATULATIONS!"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="17dp"
+        app:srcCompat="@drawable/success_2"
+        android:layout_below="@+id/textView7"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Has Been Delivered Successfully!"
+        android:layout_above="@+id/btn_COAccept"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="51dp" />
+
+    <Button
+        android:id="@+id/btn_COAccept"
+        style="@style/button_style"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp"
+        android:text="ACCEPT"
+        android:textColor="@color/common_google_signin_btn_text_light_default"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="397dp" />
+
+    <TextView
+        android:id="@+id/tv_COordId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ORDER ID"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/imageView7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp" />
+
+
+
+</RelativeLayout>

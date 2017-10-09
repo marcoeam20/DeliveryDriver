@@ -8,4 +8,16 @@
     tools:context="com.example.hendryshanedeguia.driverretrieval.HomeActivity"
     tools:showIn="@layout/app_bar_home">
 
+    <TextView
+        android:id="@+id/pendingID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+
+
+
 </android.support.constraint.ConstraintLayout>

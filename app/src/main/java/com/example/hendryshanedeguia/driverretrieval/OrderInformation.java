@@ -10,7 +10,45 @@ public class OrderInformation {
     public String custImageUrl;
     public String custUsername;
     public String orderBill;
+
+    public String getOrderGross() {
+        return orderGross;
+    }
+
+    public void setOrderGross(String orderGross) {
+        this.orderGross = orderGross;
+    }
+
+    public String getOrderVAT() {
+        return orderVAT;
+    }
+
+    public void setOrderVAT(String orderVAT) {
+        this.orderVAT = orderVAT;
+    }
+
+    public String getPromo() {
+        return promo;
+    }
+
+    public void setPromo(String promo) {
+        this.promo = promo;
+    }
+
+    public String orderGross;
+    public String orderVAT;
     public String orderID;
+    public String promo;
+
+    public String getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(String orderStatus) {
+        this.orderStatus = orderStatus;
+    }
+
+    public String orderStatus;
     public OrderInformation() {
     }
 

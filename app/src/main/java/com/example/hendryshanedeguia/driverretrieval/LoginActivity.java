@@ -2,6 +2,7 @@ package com.example.hendryshanedeguia.driverretrieval;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.TestLooperManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -25,8 +26,6 @@ public class LoginActivity extends AppCompatActivity {
     private EditText log_txtPassword;
     private Button log_btnSubmit;
 
-    private TextView Signup;
-
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
 
@@ -38,26 +37,18 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        TextView Title = (TextView) findViewById(R.id.txtTitle);
+        Typeface tx = Typeface.createFromAsset(getApplicationContext().getAssets(), "BebasNeue.otf");
+        Title.setTypeface(tx);
+
         //id referencing
         mAuth = FirebaseAuth.getInstance();
 
         log_txtEmail = (EditText) findViewById(R.id.txtEmail);
         log_txtPassword = (EditText) findViewById(R.id.txtPassword);
         log_btnSubmit = (Button) findViewById(R.id.log_btnSubmit);
-        Signup = (TextView) findViewById(R.id.txtSignUP);
 
         logProgress = new ProgressDialog(this);
-
-        Signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent regIntent = new Intent(LoginActivity.this, RegisterActivity.class);
-                startActivity(regIntent);
-                finish();
-            }
-        });
-
 
 
 
@@ -75,6 +66,8 @@ public class LoginActivity extends AppCompatActivity {
                     //Go to Main Activity
                     Intent mainIntent = new Intent(LoginActivity.this, HomeActivity.class);
                     mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    String driverid = driver.getUid();
+                    mainIntent.putExtra("driverID", driverid);
                     startActivity(mainIntent);
                     finish();
                     return;
@@ -92,6 +85,8 @@ public class LoginActivity extends AppCompatActivity {
                 //get String Editable Text
                 String email = log_txtEmail.getEditableText().toString();
                 String password = log_txtPassword.getEditableText().toString();
+
+
 
                 loginUser(email, password);
 
@@ -111,6 +106,10 @@ public class LoginActivity extends AppCompatActivity {
 
                 //if user inputted is correct
                 if(!task.isSuccessful()){
+
+
+
+
 
                     logProgress.hide();
 

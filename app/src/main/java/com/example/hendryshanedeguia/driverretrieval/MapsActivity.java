@@ -1,6 +1,7 @@
 package com.example.hendryshanedeguia.driverretrieval;
 
 import android.app.DownloadManager;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -11,6 +12,7 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.widget.Space;
 import android.support.v7.widget.LinearLayoutManager;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -38,6 +40,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 import java.util.Map;
@@ -64,7 +67,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+        mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
 
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -87,13 +90,28 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private void getAssignedCustomer() {
 
         String driver_id = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        DatabaseReference assignedCustomerRef = FirebaseDatabase.getInstance().getReference().child("customerRequest").child(customerId).child("1");
+        final DatabaseReference assignedCustomerRef = FirebaseDatabase.getInstance().getReference().child("Drivers").child(driver_id).child("customerRequest").child("customerID");
         assignedCustomerRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists()){
                     customerId = dataSnapshot.getValue().toString();
-
+                    getAssignedCustomerPickupLocation();
+                    getAssignedCustomerDestination();
+                    getAssignedCustomerInfo();
+                } else {
+                    customerId = "";
+                    if(pickupMarker!=null){
+                        pickupMarker.remove();
+                    }
+                    if (assignedCustomerPickupLocationRefListener != null){
+                        assignedCustomerRef.removeEventListener(assignedCustomerPickupLocationRefListener);
+                    }
+                    mCustomerInfo.setVisibility(View.GONE);
+                    mCustomerName.setText("");
+                    mCustomerPhone.setText("");
+                    mCustomerDestination.setText("");
+                    mCustomerProfileImage.setImageResource(R.drawable.defaultuser);
                 }
             }
 
@@ -157,20 +175,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private void getAssignedCustomerInfo(){
         mCustomerDestination.setVisibility(View.VISIBLE);
-        DatabaseReference mCustomerDatabase = FirebaseDatabase.getInstance().getReference().child("Customers").child(customerId);
+        DatabaseReference mCustomerDatabase = FirebaseDatabase.getInstance().getReference().child("Orders").child("All Orders");
         mCustomerDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists() && dataSnapshot.getChildrenCount()>0){
                     Map<String, Object> map = (Map<String, Object>) dataSnapshot.getValue();
-                    if(map.get("name")!=null){
-                        mCustomerName.setText(map.get("name").toString());
+                    if(map.get("custUsername")!=null){
+                        mCustomerName.setText(map.get("custUsername").toString());
                     }
-                    if(map.get("phone")!=null){
-                        mCustomerPhone.setText(map.get("phone").toString());
+                    if(map.get("custContact")!=null){
+                        mCustomerPhone.setText(map.get("custContact").toString());
                     }
-                    if(map.get("profileImageUrl")!=null){
-                        Glide.with(getApplication()).load(map.get("profileImageUrl").toString()).into(mCustomerProfileImage);
+                    if(map.get("custImageUrl")!=null){
+                        Picasso.with(MapsActivity.this).load(map.get("custImageUrl").toString()).into(mCustomerProfileImage);
                     }
                 }
             }
@@ -271,6 +289,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
+//    private void disconnectDriver(){
+//        LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
+//        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+//        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("driversAvailable");
+//
+//        GeoFire geoFire = new GeoFire(ref);
+//        geoFire.removeLocation(userId);
+//    }
+
 
 
     @Override
@@ -304,6 +331,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 break;
             }
         }
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+
+        if (keyCode == android.view.KeyEvent.KEYCODE_BACK) {
+
+            Intent x = getIntent();
+            String user = x.getStringExtra("driverID");
+            Intent back = new Intent(getApplicationContext(), HomeActivity.class);
+            back.putExtra("driverID", user);
+            startActivity(back);
+        }
+
+
+        return super.onKeyDown(keyCode, event);
     }
 
 

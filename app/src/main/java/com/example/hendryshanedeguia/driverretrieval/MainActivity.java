@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -28,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
     public OrderListAdapter adapter;
     ListView lv;
 
-    public CardView card;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        ref = FirebaseDatabase.getInstance().getReference("Orders");
+        ref = FirebaseDatabase.getInstance().getReference("Orders").child("All Orders");
         lv =(ListView)findViewById(R.id.lv);
         listOrders = new ArrayList<>();
 

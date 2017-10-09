@@ -35,7 +35,7 @@
         android:text="FRESHCART DRIVER"
         android:textAlignment="center"
         android:textColor="@color/common_google_signin_btn_text_dark_default"
-        android:textSize="50sp" />
+        android:textSize="75sp" />
 
 
     <Button

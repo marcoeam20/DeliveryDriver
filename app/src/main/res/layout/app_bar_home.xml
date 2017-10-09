@@ -15,19 +15,11 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/colorAccent"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
 
     </android.support.design.widget.AppBarLayout>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
 
     <Switch
         android:id="@+id/duty_switch"
@@ -57,10 +49,35 @@
         android:layout_marginTop="65dp"
         android:text="DATE" />
 
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="371dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="100dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/main"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="46dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="99dp"
+        android:text="NEW ORDERS"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="33dp" />
+
+
     <ListView
         android:id="@+id/lv_home"
         android:layout_width="match_parent"
-        android:layout_height="456dp"
-        android:layout_marginTop="110dp" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="130dp" />
 
 </android.support.design.widget.CoordinatorLayout>

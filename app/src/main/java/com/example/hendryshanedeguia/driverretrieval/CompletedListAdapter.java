@@ -17,16 +17,16 @@ import java.util.Objects;
  * Created by macbook on 27/09/2017.
  */
 
-public class  CompletedListAdapter extends  ArrayAdapter<CompletedOrderInformation> {
+public class  CompletedListAdapter extends  ArrayAdapter<OrderInformation> {
     public Activity context;
     public int resource;
-    public List<CompletedOrderInformation> listOrders;
+    public List<OrderInformation> list;
 
-    public CompletedListAdapter(@NonNull Activity context, @LayoutRes int resource, @NonNull List<CompletedOrderInformation> objects) {
+    public CompletedListAdapter(@NonNull Activity context, @LayoutRes int resource, @NonNull List<OrderInformation> objects) {
         super(context, resource, objects);
         this.context = context;
         this.resource = resource;
-        listOrders = objects;
+        list = objects;
     }
 
     @NonNull
@@ -40,9 +40,9 @@ public class  CompletedListAdapter extends  ArrayAdapter<CompletedOrderInformati
         TextView tvCustomerUsername = (TextView) v.findViewById(R.id.tvCustomerUsername);
         TextView tvCustomerAddress = (TextView) v.findViewById(R.id.tvCustomerAddress);
 
-        tvOrderID.setText(listOrders.get(position).getOrderID());
-        tvCustomerUsername.setText(listOrders.get(position).getCustUsername());
-        tvCustomerAddress.setText(listOrders.get(position).getCustAddress());
+        tvOrderID.setText(list.get(position).getOrderID());
+        tvCustomerUsername.setText(list.get(position).getCustUsername());
+        tvCustomerAddress.setText(list.get(position).getCustAddress());
 
         return v;
 

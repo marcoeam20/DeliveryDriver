@@ -3,13 +3,9 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_neworders"
-            android:icon="@drawable/ic_local_grocery_store_black_24dp"
-            android:title="New Orders" />
-        <item
             android:id="@+id/nav_completedorders"
             android:icon="@drawable/ic_check_black_24dp"
-            android:title="Completed Orders" />
+            android:title="Delivered Orders" />
         <item
             android:id="@+id/nav_locations"
             android:icon="@drawable/ic_map_black_24dp"
